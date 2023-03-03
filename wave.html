@@ -49,19 +49,61 @@
               </li>
             </ul>
           </nav>
-          <div class="header__search">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <form class="header__search header__search-btn flex btn-reset" tabindex="0" aria-label="поиска по сайту">
+            <input class="header__search-input" placeholder="Поиск по сайту" type="text">
+            <svg aria-label="Кнопка поиска по сайту" class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M20.9999 21L16.6499 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+          </form>
+          <button class="header__modal-btn btn-reset" aria-label="Вход для регистрации">Вход</button>
+          <div class="header__modal">
+          <div class="header__modal-background"></div>
+            <div class="header__modal-content">
+              <h1 class="header__modal-title">Вход</h1>
+              <p class="header__modal-descr">Если у&nbsp;вас ещё нет аккаунта,<a class="header__modal-link">зарегестрируйтесь</a></p>
+              <svg class="header__modal-close" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="21" r="19.5" stroke-width="3"/>
+                <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke-width="3"/>
+                </svg>
+                <form class="header__modal-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                  <input type="text" class="header__modal-input" placeholder="Логин">
+                  <input type="text" class="header__modal-input" placeholder="Пароль">
+                  <button class="header__modal-button" type="submit">Войти</button>
+                </form>
+                <span class="header__modal-text">Войти с&nbsp;помощью:</span>
+                <ul class="header__modal-list list-reset flex">
+                  <li class="header__modal-item">
+                    <a href="#" class="header__modal-social">
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24531_5473)"><path d="M26.3 36.6667V23.7667H30.6204L31.2667 18.7519H26.3V15.5519C26.3 14.1 26.7037 13.1093 28.7852 13.1093H31.4408V8.62408C30.1552 8.48769 28.8632 8.42154 27.5704 8.42594C23.7426 8.42594 21.1223 10.763 21.1223 15.0556V18.7519H16.7926V23.7667H21.1223V36.6667H5.18523C4.69408 36.6667 4.22306 36.4716 3.87577 36.1243C3.52848 35.777 3.33337 35.306 3.33337 34.8148V5.1852C3.33337 4.69405 3.52848 4.22303 3.87577 3.87574C4.22306 3.52845 4.69408 3.33334 5.18523 3.33334H34.8149C35.306 3.33334 35.777 3.52845 36.1243 3.87574C36.4716 4.22303 36.6667 4.69405 36.6667 5.1852V34.8148C36.6667 35.306 36.4716 35.777 36.1243 36.1243C35.777 36.4716 35.306 36.6667 34.8149 36.6667H26.3Z" /></g>
+                        <defs><clipPath id="clip0_24531_5473"><rect width="40" height="40" fill="white"/></clipPath></defs>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="header__modal-item">
+                    <a href="#" class="header__modal-social">
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="33.33" height="33.33" rx="2"/><path d="M20.7487 26.332H19.3854C19.3854 26.332 16.3772 26.5131 13.7277 23.7545C10.8383 20.7461 8.28686 14.7765 8.28686 14.7765C8.28686 14.7765 8.13973 14.3853 8.29964 14.1959C8.47938 13.9831 8.96857 13.9695 8.96857 13.9695L12.2278 13.9482C12.2278 13.9482 12.5349 13.9994 12.7547 14.1608C12.9359 14.294 13.0373 14.543 13.0373 14.543C13.0373 14.543 13.5641 15.8752 14.2617 17.0804C15.6233 19.4331 16.2575 19.9477 16.7198 19.6957C17.3934 19.3283 17.1914 16.3698 17.1914 16.3698C17.1914 16.3698 17.2037 15.296 16.8522 14.8177C16.58 14.4475 16.0667 14.3391 15.84 14.3089C15.6566 14.2844 15.9576 13.8587 16.3478 13.6676C16.9343 13.3803 17.9699 13.3641 19.1938 13.3765C20.1473 13.3863 20.4219 13.4458 20.7946 13.5357C21.6597 13.7446 21.6327 14.4138 21.5745 15.8578L21.5745 15.8579C21.5571 16.2893 21.537 16.7899 21.537 17.3681C21.537 17.4983 21.5332 17.6371 21.5293 17.7798V17.7799C21.509 18.5193 21.4858 19.3656 21.9726 19.6802C22.2223 19.8415 22.8331 19.7042 24.3603 17.111C25.084 15.8819 25.627 14.4368 25.627 14.4368C25.627 14.4368 25.7453 14.1791 25.9297 14.0688C26.1181 13.9561 26.3726 13.9907 26.3726 13.9907L29.8023 13.9695C29.8023 13.9695 30.8329 13.8466 30.9997 14.3118C31.1747 14.8001 30.6146 15.9402 29.2135 17.8077C27.8827 19.5813 27.236 20.2332 27.2968 20.8106C27.3401 21.2221 27.7429 21.5959 28.5137 22.311L28.5668 22.3603C30.2548 23.9272 30.7051 24.7501 30.8121 24.9456C30.8207 24.9615 30.8271 24.9732 30.8318 24.9809C31.5873 26.2337 29.9939 26.332 29.9939 26.332L26.9477 26.3746C26.9477 26.3746 26.2931 26.5041 25.4317 25.9125C24.9813 25.6033 24.5409 25.0985 24.1214 24.6174L24.1214 24.6174C23.4798 23.8818 22.8868 23.2019 22.3806 23.3624C21.5317 23.6319 21.5583 25.4613 21.5583 25.4613C21.5583 25.4613 21.5645 25.852 21.371 26.0601C21.1605 26.2866 20.7487 26.332 20.7487 26.332Z" fill="#121723"/>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="header__modal-item">
+                    <a href="#" class="header__modal-social">
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="33.33" height="33.33" rx="2"/>
+                        <path d="M23.9403 14.9923C23.1517 14.2694 21.7687 13.4043 19.7183 13.4043C16.8309 13.4043 14.3802 15.2649 13.4945 17.8364C13.2761 18.5001 13.1427 19.2111 13.1427 19.9459C13.1427 20.6806 13.2761 21.3917 13.5066 22.0553C14.3802 24.6269 16.8309 26.4874 19.7183 26.4874C21.344 26.4874 22.5815 26.0489 23.5036 25.4208C24.9595 24.4254 25.6146 22.9441 25.7359 21.9605H19.7183V18.0024H29.9701C30.1277 18.666 30.2006 19.3059 30.2006 20.1829C30.2006 23.4299 29.0116 26.1675 26.9491 28.028C25.1414 29.6634 22.6664 30.6115 19.7183 30.6115C15.4477 30.6115 11.7595 28.2176 9.96398 24.7335C9.22395 23.2877 8.79932 21.6642 8.79932 19.9459C8.79932 18.2275 9.22395 16.604 9.96398 15.1582C11.7595 11.6741 15.4477 9.28027 19.7183 9.28027C22.6664 9.28027 25.1293 10.335 27.0219 12.0533L23.9403 14.9923Z" fill="#121723"/>
+                        </svg>
+                    </a>
+                  </li>
+                </ul>
+            </div>
           </div>
-          <button class="header__middle-btn btn-reset">Вход</button>
       </div>
 
     </div>
     <div class="header__bottom">
       <div class="header__bottom-container container flex">
-        <ul class="header__bottom-list list-reset flex">
+        <ul class="header__bottom-list list-reset flex" aria-label="Дополнительное меню">
           <li class="header__bottom-item">
             <a href="" class="header__bottom-link">Новости</a>
           </li>
@@ -97,7 +139,7 @@
           <svg class="pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_24531_3491)">
             <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/><rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
-            <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/></g><defs><clipPath id="clip0_24531_3491"><rect width="24" height="24" fill="white"/></clipPath></defs>
+            <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/></g><defs> <rect width="24" height="24" fill="white"/></defs>
             </svg>
       </button>
       <button class="header__bottom-btn btn-reset header__bottom-btntwo" aria-label="Сейчас в эфире">
@@ -107,7 +149,7 @@
           <svg class="pause" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_24531_3491)">
             <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/><rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
-            <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/></g><defs><clipPath id="clip0_24531_3491"><rect width="24" height="24" fill="white"/></clipPath></defs>
+            <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/></g><defs><rect width="24" height="24" fill="white"/></defs>
             </svg>
       </button>
     </div>
@@ -122,7 +164,7 @@
       <div class="container hero__container">
         <ul class="hero__list list-reset flex">
           <li class="hero__item hero__item-descr">
-            <h1 class="hero__title">Радио <span>W-Wawe</span></h1>
+            <h2 class="hero__title">Радио <span>W-Wawe</span></h2>
             <p class="hero__descr">Привет, на&nbsp;связи W-Wawe! Раньше мы&nbsp;были изданием, а&nbsp;теперь пробуем себя в&nbsp;разоворном жанре. Говорим о&nbsp;музыке, политике, истории, науке и&nbsp;культуре. Здесь, помимо прямого эфира&nbsp;&mdash; архив передач и&nbsp;многое другое:)</p>
             <a href="#" class="hero__link" aria-label="Слушать эфир">Слушать эфир</a>
           </li>
@@ -740,15 +782,15 @@
         <div class="transfers__menu">
           <h2 class="transfers__title">Передачи</h2>
           <span class="transfers__text">Автор:</span>
-          <select class="transfers__select" name="select">
-            <option value="Дмитрий Гутенберг">Дмитрий Гутенберг</option>
-            <option value="Татьяна Флеганова">Татьяна Флеганова</option>
-            <option value="Анна Васильева">Анна Васильева</option>
-            <option value="Пётр Дмитриевский">Пётр Дмитриевский</option>
+          <select tabindex="0" class="transfers__select" name="select">
+            <option tabindex="0" value="dima">Дмитрий Гутенберг</option>
+            <option tabindex="0"  value="tanya">Татьяна Флеганова</option>
+            <option tabindex="0" value="anna">Анна Васильева</option>
+            <option tabindex="0"  value="petya">Пётр Дмитриевский</option>
           </select>
         </div>
         <div class="transfers__content">
-          <ul class="transfers__list list-reset flex">
+          <ul class="transfers__list list-reset flex transfers__list--active" id="dima">
             <li class="transfers__item">
               <div class="transfers__card">
                 <picture>
@@ -864,6 +906,360 @@
               </div>
             </li>
           </ul>
+
+          <ul class="transfers__list list-reset flex" id="tanya">
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/tanya1320.png">
+                  <img src="./img/tanya1.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Постфактум</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;вторникам в&nbsp;12:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/tanya2320.png">
+                  <img src="./img/tanya2.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Связи&nbsp;2.0</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;вторникам в&nbsp;18:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="/img/tanya3320.png">
+                  <img src="./img/tanya3.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Контекст</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;средам в&nbsp;12:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/tanya4320.png">
+                  <img src="./img/tanya4.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Научпоп</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;пятницам в&nbsp;10:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/tanya5320.png">
+                  <img src="./img/tanya5.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Физика</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;субботам в&nbsp;14:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/tanya6320.png">
+                  <img src="./img/tanya6.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Энергия</h3>
+                    <span class="transfers__card-subtitle">Анонсируется отдельно</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="transfers__list list-reset flex" id="anna">
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/anna1320.png">
+                  <img src="./img/anna1.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Своя культура</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;вторникам в&nbsp;11:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/anna2320.png">
+                  <img src="./img/anna2.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Утро XX&nbsp;века</h3>
+                    <span class="transfers__card-subtitle">Анонсируется отдельно</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/anna3320.png">
+                  <img src="./img/anna3.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Юра, мы&nbsp;всё...</h3>
+                    <span class="transfers__card-subtitle">Анонсируется отдельно</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/anna4320.png">
+                  <img src="./img/anna4.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Времена и&nbsp;нравы</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;четвергам в&nbsp;12:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/anna5320.png">
+                  <img src="./img/anna5.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">17:54</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;четвергам в&nbsp;16:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/anna6320.png">
+                  <img src="./img/anna6.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Как так?</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;понедельникам в&nbsp;20:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="transfers__list list-reset flex" id="petya">
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/petya1320.png">
+                  <img src="./img/petya1.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Регистр</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;понедельникам в&nbsp;14:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/petya2320.png">
+                  <img src="./img/petya2.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">День радио</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;вторникам в&nbsp;19:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/petya3320.png">
+                  <img src="./img/petya3.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Нотный стан</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;средам в&nbsp;16:30</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/petya4320.png">
+                  <img src="./img/petya4.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Мой рок</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;пятницам в&nbsp;14:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/petya5320.png">
+                  <img src="./img/petya5.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Такая музыка</h3>
+                    <span class="transfers__card-subtitle">По&nbsp;субботам в&nbsp;11:00</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transfers__item">
+              <div class="transfers__card">
+                <picture>
+                  <source media="(max-width: 480px)" srcset="./img/petya6320.png">
+                  <img src="./img/petya6.png" alt="Картинка передачи">
+                </picture>
+                <div class="transfers__card-descr">
+                  <div class="transfers__card-link">
+                    <h3 class="transfers__card-title">Новая волна</h3>
+                    <span class="transfers__card-subtitle">Анонсируется отдельно</span>
+                  </div>
+                  <a href="#" class="transfers__card-source">
+                    Подробнее
+                    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+
+
         </div>
         <div class="transfers__archive flex">
           <img src="./img/mic-min.png" alt="микрофон">
@@ -886,49 +1282,49 @@
               <div class="accordion__content">
                 <ul class="guests-list list-reset">
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Сергей Денисов</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Сергей Денисов</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Матвей Мечников</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Матвей Мечников</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Константин Прусино</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Константин Прусино</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Иван Калитников</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Иван Калитников</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Евгений Войновский</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Евгений Войновский</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Ольга Мартынова</button>
+                    <button class="btn-reset guests-list__btn" data-path="martinova" >Ольга Мартынова</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Дмитрий Михалок</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Дмитрий Михалок</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Пётр Пиотровский</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Пётр Пиотровский</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Олег Свиридовский</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Олег Свиридовский</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Владислав Кауперс</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Владислав Кауперс</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Михаил Пожитников</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Михаил Пожитников</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Георгий Полуян</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Георгий Полуян</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Денис Тельман</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Денис Тельман</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Юрий Горин</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Юрий Горин</button>
                   </li>
                   <li class="guests__list-item">
-                    <button class="btn-reset guests-list__btn">Максим Сергеев</button>
+                    <button class="btn-reset guests-list__btn" data-path="notarget">Максим Сергеев</button>
                   </li>
                 </ul>
               </div>
@@ -1009,7 +1405,7 @@
             </li>
           </ul>
           <div class="guests__content">
-            <div class="guests__cards">
+            <div class="guests__cards" data-target="notarget">
               <picture>
                 <source media ="(max-width: 460px)" srcset="./img/guestsPlud320.png">
                 <source media ="(max-width: 768px)" srcset="./img/guestsPlud768.png">
@@ -1017,9 +1413,9 @@
                 <img src="./img/guestsPlud.png" alt="будет фото гостя">
               </picture>
             </div>
-              <div data-target="martinova" class="guests__cards">
-                <div class="guests__content-bloggers guests__cards--active">
-              <div data-target="martinova" class="guests__cards guests__cards--active">
+              <div class="guests__cards">
+                <div class="guests__content-bloggers guests__content-item " data-target="martinova">
+              <div class="guests__cards">
                 <picture>
                   <source media="(max-width: 460px)" srcset="./img/martinova320.png">
                   <source media="(max-width: 768px)" srcset="./img/martinova768.png">
@@ -1075,41 +1471,41 @@
           <form class="palylists__form flex">
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Постпанк">
-              <span class="palylists-span__custom">Постпанк</span>
+              <span class="palylists-span__custom" tabindex="0">Постпанк</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Хардкор">
-              <span class="palylists-span__custom">Хардкор</span>
+              <span class="palylists-span__custom" tabindex="0">Хардкор</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Панк-рок">
-              <span class="palylists-span__custom">Панк-рок</span>
+              <span class="palylists-span__custom" tabindex="0">Панк-рок</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Рок">
-              <span class="palylists-span__custom">Рок</span>
+              <span class="palylists-span__custom" tabindex="0">Рок</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Прогрессивный рок">
-              <span class="palylists-span__custom">Прогрессивный рок</span>
+              <span class="palylists-span__custom" tabindex="0">Прогрессивный рок</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Электронная музыка">
-              <span class="palylists-span__custom">Электронная музыка</span>
+              <span class="palylists-span__custom" tabindex="0">Электронная музыка</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Классическая музыка">
-              <span class="palylists-span__custom">Классическая музыка</span>
+              <span class="palylists-span__custom" tabindex="0">Классическая музыка</span>
             </label>
             <label class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Звуки природы и&nbsp;шум города">
-              <span class="palylists-span__custom">Звуки природы и&nbsp;шум города</span>
+              <span class="palylists-span__custom" tabindex="0">Звуки природы и&nbsp;шум города</span>
             </label>
           </form>
         </div>
         <div class="palylists__content">
           <ul class="palylists__content-list list-reset">
-            <li class="palylists__content-item rus" tabindex="1">
+            <li class="palylists__content-item rus" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists11024.png">
                 <img class="palylists__content-icon" src="./img/palylists1.png" alt="Фото группы">
@@ -1123,7 +1519,7 @@
                 <span class="palylists__content-text">3&nbsp;последних альбома</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="2">
+            <li class="palylists__content-item rus" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists21024.png">
                 <img class="palylists__content-icon" src="./img/palylists2.png" alt="Фото группы">
@@ -1137,7 +1533,7 @@
                 <span class="palylists__content-text">Все песни</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="3">
+            <li class="palylists__content-item rus" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists31024.png">
                 <img class="palylists__content-icon" src="./img/palylists3.png" alt="Фото группы">
@@ -1151,7 +1547,7 @@
                 <span class="palylists__content-text">Все синглы</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="4">
+            <li class="palylists__content-item rus" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists41024.png">
                 <img class="palylists__content-icon" src="./img/palylists4.png" alt="Фото группы">
@@ -1165,7 +1561,7 @@
                 <span class="palylists__content-text">3&nbsp;последних альбома</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="5">
+            <li class="palylists__content-item rus" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists51024.png">
                 <img class="palylists__content-icon" src="./img/palylists5.png" alt="Фото группы">
@@ -1179,7 +1575,7 @@
                 <span class="palylists__content-text">Все EP</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="6">
+            <li class="palylists__content-item rus" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists61024.png">
                 <img class="palylists__content-icon" src="./img/palylists6.png" alt="Фото группы">
@@ -1193,7 +1589,7 @@
                 <span class="palylists__content-text">Альбом &laquo;Колокол&raquo;</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="7">
+            <li class="palylists__content-item eng" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists71024.png">
                 <img class="palylists__content-icon" src="./img/palylists7.png" alt="Фото группы">
@@ -1207,7 +1603,7 @@
                 <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="8">
+            <li class="palylists__content-item eng" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists81024.png">
                 <img class="palylists__content-icon" src="./img/palylists8.png" alt="Фото группы">
@@ -1221,7 +1617,7 @@
                 <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="9">
+            <li class="palylists__content-item eng" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists91024.png">
                 <img class="palylists__content-icon" src="./img/palylists9.png" alt="Фото группы">
@@ -1235,7 +1631,7 @@
                 <span class="palylists__content-text">Период 1984&ndash;1988</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="10">
+            <li class="palylists__content-item eng" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists101024.png">
                 <img class="palylists__content-icon" src="./img/palylists10.png" alt="Фото группы">
@@ -1249,7 +1645,7 @@
                 <span class="palylists__content-text">Хиты</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="11">
+            <li class="palylists__content-item eng" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists111024.png">
                 <img class="palylists__content-icon" src="./img/palylists11.png" alt="Фото группы">
@@ -1263,7 +1659,7 @@
                 <span class="palylists__content-text">Все синглы</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="12">
+            <li class="palylists__content-item eng" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists121024.png">
                 <img class="palylists__content-icon" src="./img/palylists12.png" alt="Фото группы">
@@ -1278,6 +1674,7 @@
               </div>
             </li>
           </ul>
+
         </div>
         <div class="palylists__descr">
           <p class="palylists__text">
@@ -1302,17 +1699,17 @@
               </div>
               <div class="swiper-slide with-us__swiper-slide">
                 <picture>
-                  <source media="(max-width: px)" srcset="./img/radio-green1024.png">
-                  <source media="(max-width: px)" srcset="./img/radio-green768.png">
-                  <source media="(max-width: px)" srcset="./img/radio-green320.png">
+                  <source media="(max-width: 1024px)" srcset="./img/radio-green1024.png">
+                  <source media="(max-width: 768px)" srcset="./img/radio-green768.png">
+                  <source media="(max-width: 320px)" srcset="./img/radio-green320.png">
                   <img src="./img/radio-green.png" alt="Радиоприемник">
                 </picture>
               </div>
               <div class="swiper-slide with-us__swiper-slide">
                 <picture>
-                  <source media="(max-width: px)" srcset="./img/radio-coral1024.png">
-                  <source media="(max-width: px)" srcset="./img/radio-coral768.png">
-                  <source media="(max-width: px)" srcset="./img/radio-coral320.png">
+                  <source media="(max-width: 1024px)" srcset="./img/radio-coral1024.png">
+                  <source media="(max-width: 768px)" srcset="./img/radio-coral768.png">
+                  <source media="(max-width: 320px)" srcset="./img/radio-coral320.png">
                   <img src="./img/radio-coral.png" alt="Радиоприемник">
                 </picture>
               </div>
@@ -1400,14 +1797,18 @@
           </ul>
         </div>
         <div class="abaut-us__form">
-          <form action="https://jsonplaceholder.typicode.com/posts" method="post">
-            <textarea class="abaut-us__form-textarea" name="messege" placeholder="Что скажете?"></textarea>
+          <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+            <textarea class="abaut-us__form-textarea" name="messege" placeholder="Что скажете?" aria-label="Введите текст сообщения"></textarea>
             <div class="abaut-us__form-wrapper">
-            <input class="abaut-us__form-input" type="text" name="name" placeholder="Имя" required>
-            <input class="abaut-us__form-input" type="email" name="email" placeholder="Email" required>
+              <label class="abaut-us__form-label">
+            <input class="abaut-us__form-input" type="text" name="name" placeholder="Имя" data-validate-field="name" aria-label="Введите имя">
+          </label>
+          <label class="abaut-us__form-label">
+            <input class="abaut-us__form-input" type="email" name="email" placeholder="Email" data-validate-field="email"  aria-label="Введите email">
+          </label>
           </div>
-            <button class="abaut-us__form-btn btn-reset" tupe="submit">Отправить</button>
-            <label class="abaut-us__form-approval">
+            <button class="abaut-us__form-btn btn-reset" type="submit">Отправить</button>
+            <label class="abaut-us__form-approval" tabindex="0">
               <input class="abaut-us__form-inpbottom" required type="checkbox">
               <span class="abaut-us__form-checkbox">Согласен на&nbsp;обработку персональных данных</span>
             </label>
@@ -1486,6 +1887,7 @@
       </div>
     </div>
   </footer>
+  <script src="./libs/just-validate.min.js"></script>
   <script src="./libs/choices.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
