@@ -125,6 +125,7 @@ $(".accordion").accordion({
   });
 
 
+
   new window.JustValidate('.form', {
     rules: {
       name: {
@@ -150,5 +151,23 @@ $(".accordion").accordion({
       }
 
     }
-  })
+  });
+
+const filterItem = document.querySelectorAll('.palylists__content-item');
+
+document.querySelector('.palylists__form').addEventListener('click', event => {
+  if (event.target.tagName !== 'SPAN') return false;
+
+  let filterClass = event.target.dataset['f'];
+
+  console.log(filterClass);
+
+
+  filterItem.forEach(elem => {
+    elem.classList.remove('palylists__content-itemhide');
+    if (!elem.classList.contains(filterClass)) {
+      elem.classList.toggle('palylists__content-itemhide');
+    }
+  });
+} );
 
