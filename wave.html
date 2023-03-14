@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/wave.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
   <header class="header">
@@ -30,6 +31,11 @@
           <a href="#" class="header__logo-top">
             <img src="./img/logo1.png" alt="логотип">
           </a>
+          <button class="header__burger btn-reset">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
           <nav class="nav">
             <ul class="nav__list list-reset flex">
               <li class="nav__item">
@@ -1469,43 +1475,45 @@
           <h2 class="palylists__title">Плейлисты</h2>
           <span class="palylists__text">Жанр</span>
           <form class="palylists__form flex">
-            <label class="palylists__label">
+            <ul class="list-reset">
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Постпанк">
-              <span class="palylists-span__custom" tabindex="0">Постпанк</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="postpank">Постпанк</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Хардкор">
-              <span class="palylists-span__custom" tabindex="0">Хардкор</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="hard">Хардкор</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Панк-рок">
-              <span class="palylists-span__custom" tabindex="0">Панк-рок</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="pank">Панк-рок</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Рок">
-              <span class="palylists-span__custom" tabindex="0">Рок</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="rock">Рок</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Прогрессивный рок">
-              <span class="palylists-span__custom" tabindex="0">Прогрессивный рок</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="progrock">Прогрессивный рок</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Электронная музыка">
-              <span class="palylists-span__custom" tabindex="0">Электронная музыка</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="electronic">Электронная музыка</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Классическая музыка">
-              <span class="palylists-span__custom" tabindex="0">Классическая музыка</span>
-            </label>
-            <label class="palylists__label">
+              <span class="palylists-span__custom" tabindex="0" data-f="classik">Классическая музыка</span>
+            </li>
+            <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Звуки природы и&nbsp;шум города">
-              <span class="palylists-span__custom" tabindex="0">Звуки природы и&nbsp;шум города</span>
-            </label>
+              <span class="palylists-span__custom" tabindex="0" data-f="nature">Звуки природы и&nbsp;шум города</span>
+            </li>
+          </ul>
           </form>
         </div>
         <div class="palylists__content">
           <ul class="palylists__content-list list-reset">
-            <li class="palylists__content-item rus" tabindex="0">
+            <li class="palylists__content-item rus nature" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists11024.png">
                 <img class="palylists__content-icon" src="./img/palylists1.png" alt="Фото группы">
@@ -1519,7 +1527,7 @@
                 <span class="palylists__content-text">3&nbsp;последних альбома</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="0">
+            <li class="palylists__content-item rus rock" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists21024.png">
                 <img class="palylists__content-icon" src="./img/palylists2.png" alt="Фото группы">
@@ -1533,7 +1541,7 @@
                 <span class="palylists__content-text">Все песни</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="0">
+            <li class="palylists__content-item rus postpank" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists31024.png">
                 <img class="palylists__content-icon" src="./img/palylists3.png" alt="Фото группы">
@@ -1547,7 +1555,7 @@
                 <span class="palylists__content-text">Все синглы</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="0">
+            <li class="palylists__content-item rus progrock" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists41024.png">
                 <img class="palylists__content-icon" src="./img/palylists4.png" alt="Фото группы">
@@ -1561,7 +1569,7 @@
                 <span class="palylists__content-text">3&nbsp;последних альбома</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="0">
+            <li class="palylists__content-item rus postpank" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists51024.png">
                 <img class="palylists__content-icon" src="./img/palylists5.png" alt="Фото группы">
@@ -1575,7 +1583,7 @@
                 <span class="palylists__content-text">Все EP</span>
               </div>
             </li>
-            <li class="palylists__content-item rus" tabindex="0">
+            <li class="palylists__content-item rus rock" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists61024.png">
                 <img class="palylists__content-icon" src="./img/palylists6.png" alt="Фото группы">
@@ -1589,7 +1597,7 @@
                 <span class="palylists__content-text">Альбом &laquo;Колокол&raquo;</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="0">
+            <li class="palylists__content-item eng postpank" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists71024.png">
                 <img class="palylists__content-icon" src="./img/palylists7.png" alt="Фото группы">
@@ -1603,7 +1611,7 @@
                 <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="0">
+            <li class="palylists__content-item eng postpank" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists81024.png">
                 <img class="palylists__content-icon" src="./img/palylists8.png" alt="Фото группы">
@@ -1617,7 +1625,7 @@
                 <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="0">
+            <li class="palylists__content-item eng hard" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists91024.png">
                 <img class="palylists__content-icon" src="./img/palylists9.png" alt="Фото группы">
@@ -1631,7 +1639,7 @@
                 <span class="palylists__content-text">Период 1984&ndash;1988</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="0">
+            <li class="palylists__content-item eng electronic" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists101024.png">
                 <img class="palylists__content-icon" src="./img/palylists10.png" alt="Фото группы">
@@ -1645,7 +1653,7 @@
                 <span class="palylists__content-text">Хиты</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="0">
+            <li class="palylists__content-item eng nature" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists111024.png">
                 <img class="palylists__content-icon" src="./img/palylists11.png" alt="Фото группы">
@@ -1659,7 +1667,7 @@
                 <span class="palylists__content-text">Все синглы</span>
               </div>
             </li>
-            <li class="palylists__content-item eng" tabindex="0">
+            <li class="palylists__content-item eng postpank" tabindex="0">
               <picture>
                 <source media="(max-width: 1024px)" srcset="./img/palylists121024.png">
                 <img class="palylists__content-icon" src="./img/palylists12.png" alt="Фото группы">
@@ -1673,8 +1681,175 @@
                 <span class="palylists__content-text">3&nbsp;последних альбома</span>
               </div>
             </li>
+            <li class="palylists__content-item palylists__content-itemhide  eng electronic" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists131024.png">
+                <img class="palylists__content-icon" src="./img/palylists13.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">The Chameleons</h3>
+                <span class="palylists__content-text">Период 2000-2003</span>
+              </div>
+            </li>
+            <li class="palylists__content-item eng nature palylists__content-itemhide " tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists141024.png">
+                <img class="palylists__content-icon" src="./img/palylists14.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Killing Joke</h3>
+                <span class="palylists__content-text">Период 1988-1991</span>
+              </div>
+            </li>
+            <li class="palylists__content-item eng pank palylists__content-itemhide " tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists151024.png">
+                <img class="palylists__content-icon" src="./img/palylists15.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">The Stranglers</h3>
+                <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
+              </div>
+            </li>
+            <li class="palylists__content-item eng hard palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists161024.png">
+                <img class="palylists__content-icon" src="./img/palylists16.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Ultravox</h3>
+                <span class="palylists__content-text">Период 1973-1987</span>
+              </div>
+            </li>
+            <li class="palylists__content-item rus rock palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists171024.png">
+                <img class="palylists__content-icon" src="./img/palylists17.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Pere Ubu</h3>
+                <span class="palylists__content-text">Dub Housing</span>
+              </div>
+            </li>
+            <li class="palylists__content-item rus classik palylists__content-itemhide " tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists181024.png">
+                <img class="palylists__content-icon" src="./img/palylists18.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Talking Heads</h3>
+                <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
+              </div>
+            </li>
+            <li class="palylists__content-item usa classik palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists191024.png">
+                <img class="palylists__content-icon" src="./img/palylists19.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">The Feelies</h3>
+                <span class="palylists__content-text">Crazy Rhythms</span>
+              </div>
+            </li>
+            <li class="palylists__content-item usa nature palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists201024.png">
+                <img class="palylists__content-icon" src="./img/palylists20.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Wipers</h3>
+                <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
+              </div>
+            </li>
+            <li class="palylists__content-item usa classik palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists211024.png">
+                <img class="palylists__content-icon" src="./img/palylists21.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Violent Femmes</h3>
+                <span class="palylists__content-text">Лучшее за&nbsp;всё время</span>
+              </div>
+            </li>
+            <li class="palylists__content-item usa pank palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists221024.png">
+                <img class="palylists__content-icon" src="./img/palylists22.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Minutemen</h3>
+                <span class="palylists__content-text">Хиты</span>
+              </div>
+            </li>
+            <li class="palylists__content-item usa pank palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists231024.png">
+                <img class="palylists__content-icon" src="./img/palylists23.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">Swans</h3>
+                <span class="palylists__content-text">Все синглы</span>
+              </div>
+            </li>
+            <li class="palylists__content-item usa pank palylists__content-itemhide" tabindex="0">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="./img/palylists241024.png">
+                <img class="palylists__content-icon" src="./img/palylists24.png" alt="Фото группы">
+              </picture>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+              <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+              </svg>
+              <div class="palylists__content-descr">
+                <h3 class="palylists__content-title">DEVO</h3>
+                <span class="palylists__content-text">3&nbsp;последних альбома</span>
+              </div>
+            </li>
           </ul>
-
         </div>
         <div class="palylists__descr">
           <p class="palylists__text">
