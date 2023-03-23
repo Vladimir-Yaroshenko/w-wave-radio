@@ -160,8 +160,6 @@ document.querySelector('.palylists__form').addEventListener('click', event => {
 
   let filterClass = event.target.dataset['f'];
 
-  console.log(filterClass);
-
 
   filterItem.forEach(elem => {
     elem.classList.remove('palylists__content-itemhide');
@@ -170,4 +168,5 @@ document.querySelector('.palylists__form').addEventListener('click', event => {
     }
   });
 } );
+
 
