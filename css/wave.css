@@ -171,6 +171,10 @@ img {
   margin-right: auto;
 }
 
+.header__logo-middle {
+  margin-right: auto;
+}
+
 .header__middle {
   padding: 19px 0 19px 0;
   align-items: center;
@@ -1507,7 +1511,7 @@ img {
   transition: color 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 
-.guests__accordion-svg {
+ .guests__accordion-svg {
   position: absolute;
   top: 20px;
   right: 3px;

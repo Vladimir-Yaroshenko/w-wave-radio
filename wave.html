@@ -15,7 +15,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__top flex">
+    <div class="header__top flex ">
       <div class="container">
       <a href="#" class="header__logo-top">
         <picture>
@@ -28,7 +28,7 @@
     </div>
     <div class="container header__container">
         <div class="header__middle flex">
-          <a href="#" class="header__logo-top">
+          <a href="#" class="header__logo-middle">
             <img src="./img/logo1.png" alt="логотип">
           </a>
           <button class="header__burger btn-reset">
@@ -159,7 +159,7 @@
             </svg>
       </button>
     </div>
-    <div>
+    <div class="header__bottom-age">
       <img src="./img/icon12+.svg" alt="ограничение по возросту 12+">
     </div>
   </div>
@@ -1425,7 +1425,7 @@
                 <picture>
                   <source media="(max-width: 460px)" srcset="./img/martinova320.png">
                   <source media="(max-width: 768px)" srcset="./img/martinova768.png">
-                  <source media="(max-width: 320px)" srcset="./img/martinova.png1024">
+                  <source media="(max-width: 1024px)" srcset="./img/martinova1024.png">
                   <img src="./img/martinova.png" alt="Блогер Мартынова">
                 </picture>
                 <ul class="social-links list-reset flex">
@@ -1475,7 +1475,7 @@
           <h2 class="palylists__title">Плейлисты</h2>
           <span class="palylists__text">Жанр</span>
           <form class="palylists__form flex">
-            <ul class="list-reset">
+            <ul class="list-reset palylists__form-list">
             <li class="palylists__label">
               <input class="palylists__input" type="radio" name="ganre" value="Постпанк">
               <span class="palylists-span__custom" tabindex="0" data-f="postpank">Постпанк</span>
@@ -1515,7 +1515,7 @@
           <ul class="palylists__content-list list-reset">
             <li class="palylists__content-item rus nature" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists11024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists11024.png">
                 <img class="palylists__content-icon" src="./img/palylists1.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1529,7 +1529,7 @@
             </li>
             <li class="palylists__content-item rus rock" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists21024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists21024.png">
                 <img class="palylists__content-icon" src="./img/palylists2.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1543,7 +1543,7 @@
             </li>
             <li class="palylists__content-item rus postpank" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists31024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists31024.png">
                 <img class="palylists__content-icon" src="./img/palylists3.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1557,7 +1557,7 @@
             </li>
             <li class="palylists__content-item rus progrock" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists41024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists41024.png">
                 <img class="palylists__content-icon" src="./img/palylists4.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1571,7 +1571,7 @@
             </li>
             <li class="palylists__content-item rus postpank" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists51024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists51024.png">
                 <img class="palylists__content-icon" src="./img/palylists5.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1585,7 +1585,7 @@
             </li>
             <li class="palylists__content-item rus rock" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists61024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists61024.png">
                 <img class="palylists__content-icon" src="./img/palylists6.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1599,7 +1599,7 @@
             </li>
             <li class="palylists__content-item eng postpank" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists71024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists71024.png">
                 <img class="palylists__content-icon" src="./img/palylists7.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1613,7 +1613,7 @@
             </li>
             <li class="palylists__content-item eng postpank" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists81024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists81024.png">
                 <img class="palylists__content-icon" src="./img/palylists8.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1627,7 +1627,7 @@
             </li>
             <li class="palylists__content-item eng hard" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists91024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists91024.png">
                 <img class="palylists__content-icon" src="./img/palylists9.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1641,7 +1641,7 @@
             </li>
             <li class="palylists__content-item eng electronic" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists101024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists101024.png">
                 <img class="palylists__content-icon" src="./img/palylists10.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1655,7 +1655,7 @@
             </li>
             <li class="palylists__content-item eng nature" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists111024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists111024.png">
                 <img class="palylists__content-icon" src="./img/palylists11.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1669,7 +1669,7 @@
             </li>
             <li class="palylists__content-item eng postpank" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists121024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists121024.png">
                 <img class="palylists__content-icon" src="./img/palylists12.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1683,7 +1683,7 @@
             </li>
             <li class="palylists__content-item palylists__content-itemhide  eng electronic" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists131024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists131024.png">
                 <img class="palylists__content-icon" src="./img/palylists13.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1697,7 +1697,7 @@
             </li>
             <li class="palylists__content-item eng nature palylists__content-itemhide " tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists141024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists141024.png">
                 <img class="palylists__content-icon" src="./img/palylists14.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1711,7 +1711,7 @@
             </li>
             <li class="palylists__content-item eng pank palylists__content-itemhide " tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists151024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists151024.png">
                 <img class="palylists__content-icon" src="./img/palylists15.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1725,7 +1725,7 @@
             </li>
             <li class="palylists__content-item eng hard palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists161024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists161024.png">
                 <img class="palylists__content-icon" src="./img/palylists16.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1739,7 +1739,7 @@
             </li>
             <li class="palylists__content-item rus rock palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists171024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists171024.png">
                 <img class="palylists__content-icon" src="./img/palylists17.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1753,7 +1753,7 @@
             </li>
             <li class="palylists__content-item rus classik palylists__content-itemhide " tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists181024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists181024.png">
                 <img class="palylists__content-icon" src="./img/palylists18.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1767,7 +1767,7 @@
             </li>
             <li class="palylists__content-item usa classik palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists191024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists191024.png">
                 <img class="palylists__content-icon" src="./img/palylists19.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1781,7 +1781,7 @@
             </li>
             <li class="palylists__content-item usa nature palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists201024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists201024.png">
                 <img class="palylists__content-icon" src="./img/palylists20.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1795,7 +1795,7 @@
             </li>
             <li class="palylists__content-item usa classik palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists211024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists211024.png">
                 <img class="palylists__content-icon" src="./img/palylists21.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1809,7 +1809,7 @@
             </li>
             <li class="palylists__content-item usa pank palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists221024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists221024.png">
                 <img class="palylists__content-icon" src="./img/palylists22.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1823,7 +1823,7 @@
             </li>
             <li class="palylists__content-item usa pank palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists231024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists231024.png">
                 <img class="palylists__content-icon" src="./img/palylists23.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1837,7 +1837,7 @@
             </li>
             <li class="palylists__content-item usa pank palylists__content-itemhide" tabindex="0">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/palylists241024.png">
+                <source media="(max-width: 1200px)" srcset="./img/palylists241024.png">
                 <img class="palylists__content-icon" src="./img/palylists24.png" alt="Фото группы">
               </picture>
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
