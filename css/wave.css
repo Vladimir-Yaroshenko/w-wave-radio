@@ -24,6 +24,7 @@ a {
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .list-reset {
@@ -378,7 +379,7 @@ img {
   right: 28px;
   cursor: pointer;
   stroke: var(--color-text_grey);
-  transition: stroke 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
 .header__modal-close:focus {
@@ -496,6 +497,10 @@ img {
 
 .header__modal-social:active svg {
   fill: var(--color-primary_shade);
+}
+
+.header__modal-toclose {
+   transform: rotate(45deg);
 }
 
 

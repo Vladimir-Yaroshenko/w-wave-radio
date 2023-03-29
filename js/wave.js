@@ -32,6 +32,8 @@ headerSearchInput.classList.toggle('header__search-input-activ')
  headerModalClose.addEventListener('click', function(){
 
   headerModal.classList.remove('header__modal-activ');
+
+  headerModalClose.classList.toggle('header__modal-toclose');
  });
 
 
@@ -83,7 +85,7 @@ let listPetya = document.querySelector('#petya');
 
 
 transfersSelect.addEventListener('change', function() {
-  console.log(this.value);
+
   document.querySelector('.transfers__list--active.transfers__list').classList.remove('transfers__list--active');
 
   if (this.value == 'dima') {
@@ -109,9 +111,13 @@ $(".accordion").accordion({
   });
 
 
-  let swiper = new Swiper('.swiper', {
+  const slider = document.querySelector('.with-us__swiper');
+  let mySwiper = new Swiper(slider, {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     speed: 600,
     loop: true,
     pagination: {
@@ -119,9 +125,9 @@ $(".accordion").accordion({
       type: 'bullets',
       clickable: true,
     },
-      autoplay: {
-        delay: 5000
-      },
+      // autoplay: {
+      //   delay: 5000
+      // },
   });
 
 
@@ -167,6 +173,31 @@ document.querySelector('.palylists__form').addEventListener('click', event => {
       elem.classList.toggle('palylists__content-itemhide');
     }
   });
-} );
+});
+
+
+let burger = document.querySelector('.header__burger');
+let menu = document.querySelector('.nav ');
+let menuBottom = document.querySelector('.header__bottom-list');
+
+burger.addEventListener('click', function () {
+  burger.classList.toggle('header__burger-active');
+
+  menu.classList.toggle('nav-active');
+
+  menuBottom.classList.toggle('nav-active');
+})
+
+let panel = document.querySelector('.header__bottom-reveal');
+let players = document.querySelector('.header__bottom-players');
+let svgPlus = document.querySelector('.header__bottom-plus');
+
+panel.addEventListener('click', () => {
+  players.classList.toggle('header__players-active');
+
+  svgPlus.classList.toggle('header__bottom-plus-active');
+})
+
+
 
 
