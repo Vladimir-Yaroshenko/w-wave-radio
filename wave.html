@@ -130,7 +130,7 @@
           </li>
         </ul>
       <button class="header__bottom-reveal" aria-label="Раскрыть панель управления">
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="header__bottom-plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE"/>
           <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white"/>
           <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
@@ -1263,12 +1263,9 @@
               </div>
             </li>
           </ul>
-
-
-
         </div>
         <div class="transfers__archive flex">
-          <img src="./img/mic-min.png" alt="микрофон">
+          <img class="transfers__archive-icon" src="./img/mic-min.png" alt="микрофон">
           <a href="#" class="ransfers__archive-link"> Архив</a>
           <p class="transfers__archive-descr">В&nbsp;архив попадают все передачи, которые вы&nbsp;пропустили! <span>Enjoy:)</span></p>
         </div>
@@ -1866,26 +1863,29 @@
             <div class="swiper-wrapper with-us__swiper-slide">
               <div class="swiper-slide with-us__swiper-slide">
                 <picture>
-                  <source media="(max-width: 1024px)" srcset="./img/radio-red1024.png">
-                  <source media="(max-width: 768px)" srcset="./img/radio-red768.png">
-                  <source media="(max-width: 320px)" srcset="./img/radio-red320.png">
-                  <img src="./img/radio-red.png" alt="Радиоприемник">
+                  <source media ="(max-width: 577px)" srcset="./img/radiored320.png">
+                  <source media ="(max-width: 683px)" srcset="./img/radiored1024.png">
+                  <source media ="(max-width: 768px)" srcset="./img/radiored768.png">
+                  <source media ="(max-width: 1024px)" srcset="./img/radiored1024.png">
+                  <img src="./img/radiored.png" alt="Радиоприемник">
                 </picture>
               </div>
               <div class="swiper-slide with-us__swiper-slide">
-                <picture>
-                  <source media="(max-width: 1024px)" srcset="./img/radio-green1024.png">
-                  <source media="(max-width: 768px)" srcset="./img/radio-green768.png">
-                  <source media="(max-width: 320px)" srcset="./img/radio-green320.png">
-                  <img src="./img/radio-green.png" alt="Радиоприемник">
-                </picture>
+                  <picture>
+                    <source media ="(max-width: 577px)" srcset="./img/radio-green320.png">
+                    <source media ="(max-width: 683px)" srcset="./img/radio-green1024.png">
+                    <source media ="(max-width: 768px)" srcset="./img/radio-green768.png">
+                    <source media ="(max-width: 1024px)" srcset="./img/radio-green1024.png">
+                    <img src="./img/radio-green.png" alt="Радиоприемник">
+                  </picture>
               </div>
               <div class="swiper-slide with-us__swiper-slide">
                 <picture>
-                  <source media="(max-width: 1024px)" srcset="./img/radio-coral1024.png">
-                  <source media="(max-width: 768px)" srcset="./img/radio-coral768.png">
-                  <source media="(max-width: 320px)" srcset="./img/radio-coral320.png">
-                  <img src="./img/radio-coral.png" alt="Радиоприемник">
+                  <source media ="(max-width: 577px)" srcset="./img/radiocoral320.png">
+                  <source media ="(max-width: 683px)" srcset="./img/radiocoral1024.png">
+                  <source media ="(max-width: 768px)" srcset="./img/radiocoral768.png">
+                  <source media ="(max-width: 1024px)" srcset="./img/radiocoral1024.png">
+                  <img src="./img/radiocoral.png" alt="Радиоприемник">
                 </picture>
               </div>
             </div>
@@ -1924,9 +1924,9 @@
             <li class="abaut-us__guest-item">
               <div class="abaut-us__card">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/expert11024.png">
-                <source media="(max-width: 768px)" srcset="./img/expert1.png">
                 <source media="(max-width: 320px)" srcset="./img/expert1320.png">
+                <source media="(max-width: 768px)" srcset="./img/expert1.png">
+                <source media="(max-width: 1024px)" srcset="./img/expert11024.png">
                 <img src="./img/expert1.png" alt="Фото эксперта">
               </picture>
               <h4 class="abaut-us__card-title">Дмитрий Гутенберг</h4>
@@ -1936,9 +1936,9 @@
             <li class="abaut-us__guest-item">
               <div class="abaut-us__card">
                 <picture>
-                  <source media="(max-width: 1024px)" srcset="./img/expert21024.png">
-                  <source media="(max-width: 768px)" srcset="./img/expert2.png">
                   <source media="(max-width: 320px)" srcset="./img/expert2320.png">
+                  <source media="(max-width: 768px)" srcset="./img/expert2.png">
+                  <source media="(max-width: 1024px)" srcset="./img/expert21024.png">
                   <img src="./img/expert2.png" alt="Фото эксперта">
                 </picture>
                 <h4 class="abaut-us__card-title">Анна Васильева</h4>
@@ -1948,9 +1948,9 @@
             <li class="abaut-us__guest-item">
               <div class="abaut-us__card">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/expert31024.png">
-                <source media="(max-width: 768px)" srcset="./img/expert3.png">
                 <source media="(max-width: 320px)" srcset="./img/expert3320.png">
+                <source media="(max-width: 768px)" srcset="./img/expert3.png">
+                <source media="(max-width: 1024px)" srcset="./img/expert31024.png">
                 <img src="./img/expert3.png" alt="Фото эксперта">
               </picture>
               <h4 class="abaut-us__card-title">Пётр Дмитриевский</h4>
@@ -1960,9 +1960,9 @@
             <li class="abaut-us__guest-item">
               <div class="abaut-us__card">
               <picture>
-                <source media="(max-width: 1024px)" srcset="./img/expert41024.png">
-                <source media="(max-width: 768px)" srcset="./img/expert4.png">
                 <source media="(max-width: 320px)" srcset="./img/expert4320.png">
+                <source media="(max-width: 768px)" srcset="./img/expert4.png">
+                <source media="(max-width: 1024px)" srcset="./img/expert41024.png">
                 <img src="./img/expert4.png" alt="Фото эксперта">
               </picture>
               <h4 class="abaut-us__card-title">Татьяна Флеганова</h4>
@@ -2023,7 +2023,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__top-right">
+        <div class="footer__top-right footer__top-container">
           <nav class="footer__nav">
           <ul class="footer__nav-list list-reset">
             <li class="footer__nav-item">
