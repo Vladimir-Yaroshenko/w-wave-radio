@@ -675,6 +675,7 @@ img {
   height: 3px;
   border-radius: 4px;
   background-color: var(--color-bg_btn);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .header__burger-line:nth-child(1) {
