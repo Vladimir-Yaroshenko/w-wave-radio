@@ -1938,6 +1938,7 @@ img {
 
 .palylists__content-itemhide {
   opacity: 1;
+  display: block;
   animation-name: a1;
   animation-duration: 2s;
   animation-fill-mode: forwards;
