@@ -598,6 +598,10 @@
     background-color:  #AA9DFA;
   }
 
+  .stop__scroll {
+    overflow: hidden;
+  }
+
 .header__modal-content {
   width: 539px;
   height: 635px;
@@ -1619,7 +1623,7 @@
 }
 
 .guests__accordion-svg {
-  top: 12px;
+  top: 4px;
   right: 0;
   width: 30px;
   height: 30px;
@@ -2777,14 +2781,17 @@
 
 .rus::after {
   left: unset;
+  right: 1px;
 }
 
 .usa::after {
   left: unset;
+  right: 1px;
 }
 
 .eng::after {
   left: unset;
+  right: 1px;
 }
 
 .palylists__label .palylists-span__custom:focus {

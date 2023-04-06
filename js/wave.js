@@ -21,19 +21,22 @@ headerSearchInput.classList.toggle('header__search-input-activ')
  })
 
 
- let headerModalBtn = document.querySelector('.header__modal-btn');
- let headerModal = document.querySelector('.header__modal');
- let headerModalClose = document.querySelector('.header__modal-close');
+ const headerModalBtn = document.querySelector('.header__modal-btn');
+ const headerModal = document.querySelector('.header__modal');
+ const headerModalClose = document.querySelector('.header__modal-close');
 
  headerModalBtn.addEventListener('click', function(){
   headerModal.classList.add('header__modal-activ');
+  document.body.classList.add('stop__scroll');
  });
 
  headerModalClose.addEventListener('click', function(){
 
   headerModal.classList.remove('header__modal-activ');
+  document.body.classList.remove('stop__scroll');
 
   headerModalClose.classList.toggle('header__modal-toclose');
+
  });
 
 
@@ -103,7 +106,7 @@ transfersSelect.addEventListener('change', function() {
 });
 
 
-$(".accordion").accordion({
+$(".guests__accordion-list").accordion({
   heightStyle: "content",
   active: 0,
   collapsible: true,
@@ -176,9 +179,10 @@ document.querySelector('.palylists__form').addEventListener('click', event => {
 });
 
 
-let burger = document.querySelector('.header__burger');
-let menu = document.querySelector('.nav ');
-let menuBottom = document.querySelector('.header__bottom-list');
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.nav ');
+const menuBottom = document.querySelector('.header__bottom-list');
+const menuLink = document.querySelectorAll('.nav__link');
 
 burger.addEventListener('click', function () {
   burger.classList.toggle('header__burger-active');
@@ -186,17 +190,33 @@ burger.addEventListener('click', function () {
   menu.classList.toggle('nav-active');
 
   menuBottom.classList.toggle('nav-active');
-})
 
-let panel = document.querySelector('.header__bottom-reveal');
-let players = document.querySelector('.header__bottom-players');
-let svgPlus = document.querySelector('.header__bottom-plus');
+  document.body.classList.toggle('stop__scroll');
+});
+
+menuLink.forEach(function(link){
+  link.addEventListener('click', function(){
+
+    burger.classList.remove('header__burger-active');
+
+    menu.classList.remove('nav-active');
+
+    menuBottom.classList.remove('nav-active');
+
+    document.body.classList.remove('stop__scroll');
+
+  })
+});
+
+const panel = document.querySelector('.header__bottom-reveal');
+const players = document.querySelector('.header__bottom-players');
+const svgPlus = document.querySelector('.header__bottom-plus');
 
 panel.addEventListener('click', () => {
   players.classList.toggle('header__players-active');
 
   svgPlus.classList.toggle('header__bottom-plus-active');
-})
+});
 
 
 
