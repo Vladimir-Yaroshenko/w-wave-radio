@@ -1978,7 +1978,9 @@
           </ul>
         </div>
         <div class="abaut-us__form">
-          <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <form class="form" action="mail.php" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="admin_email[]" value="iaroshenko.vladimir@yandex.ru">
+            <input type="hidden" name="form_subject" value="Тема письма">
             <textarea class="abaut-us__form-textarea" name="messege" placeholder="Что скажете?" aria-label="Введите текст сообщения"></textarea>
             <div class="abaut-us__form-wrapper">
               <label class="abaut-us__form-label">
