@@ -1703,19 +1703,6 @@ img {
   transition: border 0.3s ease-in-out;
 }
 
-.palylists-span__custom:focus::before {
-  background: var(--color-text_grey);
-  border: 2px solid var(--color-bg_btn);
-}
-
-.palylists-span__custom:hover::before  {
-  border: 2px solid var(--color-bg_btn);
-}
-
-.palylists-span__custom:active::before  {
-  border: 7px solid var(--color-text_primary);
-}
-
 .palylists__input:checked + .palylists-span__custom::after {
   content: "";
   position: absolute;
@@ -1726,6 +1713,20 @@ img {
   border-radius: 100%;
   border: 7px solid var(--color-text_primary);
   transition: border 0.3s ease-in-out;
+}
+
+.palylists-span__custom:focus::before {
+  background: var(--color-text_grey);
+  border: 2px solid var(--color-bg_btn);
+}
+
+.palylists-span__custom:hover::before  {
+  border: 2px solid var(--color-bg_btn);
+}
+
+.palylists__label .palylists-span__custom:active::before  {
+  border: 7px solid var(--color-text_primary);
+  background: unset;
 }
 
 
@@ -2058,6 +2059,8 @@ img {
   background-color: var(--color-promo);
   color: var(--color-text_black);
   border: none;
+  border: unset;
+  outline: none;
 }
 
 .with-us__link:active {
